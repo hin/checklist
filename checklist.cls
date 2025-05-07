@@ -3,7 +3,7 @@
 
 \LoadClass[10pt, a4paper, onecolumn, twoside]{article}
 \RequirePackage[utf8]{inputenc}
-\RequirePackage[paperheight=270mm,paperwidth=90mm,margin=1mm]{geometry}
+\RequirePackage[paperheight=285mm,paperwidth=90mm,margin=1mm]{geometry}
 \RequirePackage{xcolor}
 %\RequirePackage{parskip}
 \RequirePackage{enumitem}
