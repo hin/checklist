@@ -1,0 +1,169 @@
+\documentclass{checklist}
+\usepackage[utf8]{inputenc}
+\usepackage{gensymb}
+\usepackage[yyyymmdd]{datetime}
+\renewcommand{\dateseparator}{-}
+
+%\usepackage[paperheight=297mm,paperwidth=100mm,margin=1mm]{geometry}
+
+\begin{document}
+
+\checklist{gray}{PA28-181 SE-MLT - Normala procedurer}{
+    Hans Insulander, ÖSFK
+    \hfill \today
+
+    \clsection{Före flygning}{
+        \cl{Handlingar, anmärkningar, gångtid}{KONTROLL}
+        \cl{Lås upp rodren, öppna bränslekran, full klaff}{}
+        \cl{Magneter}{OFF}
+        \cl{MASTER SWITCH}{OFF}
+        \cl{RADIO MASTER}{OFF}
+        \cl{Yttre skador}{KONTROLL}
+        \cl{Motorrum, motorupphängning}{KONTROLL}
+        \cl{Cylinderflänsar}{KONTROLL}
+        \cl{Oljenivå, synliga oljeläckage}{KONTROLL}
+        \cl{Propeller och spinner}{KONTROLL}
+        \cl{Bränslenivå (visuellt)}{KONTROLL}
+        \cl{Tanklock}{ÅTDRAGNA}
+        \cl{Lufthål tankar}{KONTROLL}
+        \cl{Bränslefilter och bränsletankar}{DRÄNERA}
+        \cl{Dragstång}{BORTTAGEN}
+    }
+
+    \clsection{Före motorstart}{
+        \cl{Parkeringsbroms}{TILL}
+        \cl{Förarstol}{INSTÄLLD}
+        \cl{Automatsäkringar}{KONTROLL}
+        \cl{RADIO MASTER}{OFF}
+        \cl{Elförbrukare}{OFF}
+        \cl{MASTER SWITCH}{ON}
+        \cl{Bränslemätare}{KONTROLL}
+    }
+
+    \clsection{Motorstart}{
+        \cl{Blandningsreglage}{HELT FRAM}
+        \cl{Förgasarvärme}{KALL}
+        \cl{Bränslepump}{ON}
+        \cl{Bränsletryck}{KONTROLL}
+        \cl{Snapsa (vid kall motor)}{}
+        \cl{Snapspumpen låst}{}
+        \cl{Gasreglage}{1-2 pumpslag, parkera på 5 mm}
+        \cl{Anti-collision}{ON}
+        \cl{Propellerfaltet fritt}{START}
+    }
+
+    \clsection{Efter motorstart}{
+        \cl{Oljetryck}{KONTROLL}
+        \cl{Bränslepump}{OFF}
+        \cl{Bränsletryck}{KONTROLL}
+        \cl{Laddning}{KONTROLL}
+    }
+
+    \clsection{Före taxi}{
+        \cl{Säkerhetsbälten}{KONTROLL}
+        \cl{RADIO MASTER}{ON}
+        \cl{Höjdmätare}{INSTÄLLD}
+    }
+
+
+    \clsection{Motoruppkörning}{
+        \cl{Motorvarv}{2000 RPM}
+        \cl{Magneter}{KONTROLL}
+        \cl{Förvärmning}{KONTROLL}
+        \cl{Motorinstrument}{KONTROLL}
+        \cl{Vacuumtryck}{KONTROLL}
+        \cl{Motorvarv}{1000 RPM}
+    }
+
+    \clsection{Före start}{
+        \cl{Dörr}{STÄNGD}
+        \cl{Roder}{KONTROLL}
+        \cl{Höjd och sidtrim}{TAKE OFF}
+        \cl{Kursgyro}{KONTROLL}
+        \cl{Bränsletank}{BÄSTA}
+        \cl{Blandning}{RIK}
+        \cl{Bränslepump}{ON}
+        \cl{Förvärmning}{KALL}
+        \cl{Klaff}{TAKE OFF}
+        \cl{Autopilot}{FRÅN}
+        \cl{Motorinstrument}{KONTROLL}
+        \cl{Nödchecklista \& TEM}{REPETERA}
+    }
+
+    \clsection{Start}{
+        \cl{Fullgas}{}
+        \cl{Motorvarv}{NORMAL}
+        \cl{Hastighetsmätare}{NORMAL}
+        \cl{Stigfart}{75 KTS}
+        \cl{Klaff}{IN 500 ft}
+        \cl{Bränslepump}{OFF}
+        \cl{Motorinstrument, vingar}{KONTROLL}
+    }
+
+    \clsection{Planflykt}{
+        \cl{Motorvarv}{INSTÄLLD}
+        \cl{Blandning}{INSTÄLLD}
+    }
+
+    \clsection{Landning}{
+        \cl{Bränslekran}{BÄSTA TANK}
+        \cl{Autopilot}{FRÅN}
+        \cl{Blandning}{RIK}
+        \cl{Bränslepump}{ON}
+        \cl{Förvärmning}{VARM}
+        \cl{Klaff}{VIT BÅGE}
+        \cl{Finalfart}{70-75 KTS}
+        \cl{Förvärmning (kort final)}{KALL}
+    }
+
+    \clsection{Efter landning}{
+        \cl{Klaff}{IN}
+        \cl{Bränslepump}{OFF}
+    }
+
+    \clsection{Kupering av motor}{
+        \cl{Parkeringsbroms}{TILL}
+        \cl{ELT sänder inte (121.5)}{KONTROLL}
+        \cl{RADIO MASTER}{OFF}
+        \cl{Elförbrukare}{OFF}
+        \cl{Blandning}{AV}
+        \cl{ANTI-COLLISION}{OFF}
+        \cl{MASTER SWITCH}{OFF}
+        \cl{Magneter}{OFF}
+        \cl{Bränslekran}{OFF}
+    }
+}
+
+\checklist{red}{Nödchecklista}{
+    \clsection{Motorbortfall}{
+        \cl{Fart}{75 Kt}
+        \cl{Sväng mot öppen terräng}{}
+        \cl{Bränslekran}{SKIFTA}
+        \cl{Blandning}{RIK}
+        \cl{Bränslepump}{ON}
+        \cl{Förvärme}{VARM}
+        \cl{Magneter}{TESTA}
+    }
+
+    \clsection{Motorbrand}{
+        \cl{Kabinvärme}{FRÅN}
+        \cl{Bränslekran}{OFF}
+        \cl{Transponder}{7700}
+        \cl{Nödmeddelande 121,5 eller aktuell frekvens}{}
+        \cl{MASTER SWITCH}{OFF}
+        \cl{Tvära flygplanet (max ett steg klaff)}{}
+        \cl{Nödlanda}{}
+        \cl{Lås upp dörren}{}
+    }
+
+}
+
+\begin{center}
+    \textbf{
+        \textcolor{red}{
+            Inofficiell checklista. Använd på eget ansvar! \\
+        }
+    }
+\end{center}
+
+\end{document}

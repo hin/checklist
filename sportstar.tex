@@ -1,12 +1,14 @@
 \documentclass{checklist}
 \usepackage[utf8]{inputenc}
 \usepackage{gensymb}
+\usepackage[yyyymmdd]{datetime}
+\renewcommand{\dateseparator}{-}
 
 \begin{document}
-%
     
 \checklist{gray}{SportStar RTC - Normala procedurer}{
     Hans Insulander, ÖSFK
+    \hfill \today
 
     \clsection{Före motorstart}{
         \cl{Daglig tillsyn}{UTFÖRD}
@@ -116,17 +118,17 @@
     \clsection{Parkering}{
         \cl{Bromsar}{LÅSTA}
         \cl{Tachotid}{NOTERA}
-        \cl{Blocktid}{NOTERA}
-        \cl{Landningstid}{NOTERA}
         \cl{AVIONICS SWITCH}{OFF}
         \cl{Elförbrukare}{OFF}
         \cl{Gasreglage}{TOMGÅNG}
         \cl{Tändningsnyckel}{OFF}
         \cl{BEACONS}{OFF}
         \cl{MASTER SWITCH}{OFF}
+        \cl{Blocktid}{NOTERA}
+        \cl{Landningstid}{NOTERA}
         \cl{Färdplan}{AVSLUTA}
-        \clnote{Stockholm AOR: 08-585 545 05. \\
-                Malmö AOR: 040-613 24 05.}
+        \clinfo{Stockholm AOR \dotfill 08-585 545 05 \\
+                Malmö AOR \dotfill 040-613 24 05}
     }
 }
 
@@ -145,27 +147,13 @@
     }
 }
 
-\begin{tcolorbox}[
-    enhanced,
-    breakable,
-    size=small,
-    colframe=gray,
-    colback=gray!5!white,
-    title=\textbf{Performance Specifications}
-    ]
-
-    \begin{itemize}[nosep]
-
-    \item Max demonstrerad sidvindskomposant \dotfill 18 Kt
-    \item Best angle-of-climb speed - $V_X$ \\
-        Flaps retracted - 0\degree \dotfill 49 kt \\
-        Flaps take-off - 15\degree \dotfill 48 kt
-    \item Best rate-of-climb speed - $V_Y$ \\
-        Flaps retracted - 0\degree \dotfill 65 kt \\
-        Flaps take-off - 15\degree \dotfill 61 kt
-
-    \end{itemize}
-\end{tcolorbox}
+\begin{center}
+    \textbf{
+        \textcolor{red}{
+            Inofficiell checklista. Använd på eget ansvar! \\
+        }
+    }
+\end{center}
 
 \end{document}
 
