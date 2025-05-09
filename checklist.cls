@@ -69,7 +69,7 @@
 %
 \newcommand{\clsection}[2]{
     \tcbsubtitle{#1}
-    \begin{enumerate}[nosep]
+    \begin{enumerate}[nosep,leftmargin=3mm]
         #2
     \end{enumerate}
 }
