@@ -3,7 +3,7 @@
 
 \LoadClass[10pt, a4paper, onecolumn, twoside]{article}
 \RequirePackage[utf8]{inputenc}
-\RequirePackage[paperheight=290mm,paperwidth=100mm,margin=0mm]{geometry}
+\RequirePackage[paperheight=290mm,paperwidth=95mm,margin=2mm]{geometry}
 \RequirePackage{xcolor}
 \RequirePackage{enumitem}
 \RequirePackage{multicol}
