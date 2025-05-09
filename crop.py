@@ -4,6 +4,8 @@ import pymupdf
 A4Width = 595
 A4Height = 842
 
+a4rect = pymupdf.Rect(0, 0, A4Width, A4Height)
+
 def page_bounding_box(page):
     rects = []
 
@@ -35,9 +37,10 @@ def page_bounding_box(page):
 def main(argv):
     input_filename = argv[1]
     output_filename = argv[2]
-    doc = pymupdf.open(input_filename)
+    src = pymupdf.open(input_filename)
+    dst = pymupdf.open()
 
-    rects = [page_bounding_box(page) for page in doc]
+    rects = [page_bounding_box(page) for page in src]
 
     bounding_box = rects[0]
     for rect in rects[1:]:
@@ -45,7 +48,7 @@ def main(argv):
 
     print(bounding_box)
 
-    for page in doc:
+    for page in src:
         #shape = page.new_shape()
         #shape.draw_rect(bounding_box)
         #shape.finish(color=(1,0,0))
@@ -53,15 +56,37 @@ def main(argv):
         #shape.finish(color=(0,0,1))
         #shape.commit()
 
-        page.set_cropbox(bounding_box)
-        #print(page.show_pdf_page)
+        #page.set_cropbox(bounding_box)
 
-        #dx = bounding_box.x0 - A4Width/2 + (bounding_box.x1 - bounding_box.x0)/2
-        #dy = 0#bounding_box.y1# - A4Height/2 + (bounding_box.y1 - bounding_box.y0)/2
-        #paper = pymupdf.Rect(dx, dy, dx + A4Width, dy + A4Height)
-        #page.set_mediabox(paper)
+        w = page.rect.x1 - page.rect.x0
+        h = page.rect.y1 - page.rect.y0
 
-    doc.save(output_filename)
+        x = (A4Width - w)/2
+        y = (A4Height - h)/2
+
+        newpage = dst.new_page()
+        dstrect = pymupdf.Rect(x,y,x+w,y+h)
+        newpage.show_pdf_page(dstrect, src, page.number)
+
+        m = 10 # margin
+
+        shape = newpage.new_shape()
+        shape.draw_line((dstrect.x0, dstrect.y0-m), (dstrect.x0, 0))
+        shape.draw_line((dstrect.x0-m, dstrect.y0), (0, dstrect.y0))
+
+        shape.draw_line((dstrect.x1, dstrect.y0-m), (dstrect.x1, 0))
+        shape.draw_line((dstrect.x1+m, dstrect.y0), (A4Width, dstrect.y0))
+
+        shape.draw_line((dstrect.x0, dstrect.y1+m), (dstrect.x0, A4Height))
+        shape.draw_line((dstrect.x0-m, dstrect.y1), (0, dstrect.y1))
+
+        shape.draw_line((dstrect.x1, dstrect.y1+m), (dstrect.x1, A4Height))
+        shape.draw_line((dstrect.x1+m, dstrect.y1), (A4Width, dstrect.y1))
+
+        shape.finish(color=(0,0,0))
+        shape.commit()
+    
+    dst.save(output_filename, garbage=4, deflate=True)
 
 if __name__ == '__main__':
     main(sys.argv)
