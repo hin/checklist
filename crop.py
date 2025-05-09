@@ -49,12 +49,12 @@ def main(argv):
     print(bounding_box)
 
     for page in src:
-        shape = page.new_shape()
-        shape.draw_rect(bounding_box)
-        shape.finish(color=(1,0,0))
+        #shape = page.new_shape()
+        #shape.draw_rect(bounding_box)
+        #shape.finish(color=(1,0,0))
         #shape.draw_line((bounding_box.x1, bounding_box.y1), (0,0))
         #shape.finish(color=(0,0,1))
-        shape.commit()
+        #shape.commit()
 
         #page.set_cropbox(bounding_box)
 
@@ -68,7 +68,7 @@ def main(argv):
         dstrect = pymupdf.Rect(x,y,x+w,y+h)
         newpage.show_pdf_page(dstrect, src, page.number, clip=bounding_box)
 
-        m = 0 # margin
+        m = 5 # margin
 
         shape = newpage.new_shape()
         shape.draw_line((dstrect.x0, dstrect.y0-m), (dstrect.x0, 0))
