@@ -3,27 +3,29 @@
 
 \LoadClass[10pt, a4paper, onecolumn, twoside]{article}
 \RequirePackage[utf8]{inputenc}
-\RequirePackage[paperheight=290mm,paperwidth=100mm,margin=1mm]{geometry}
+\RequirePackage[paperheight=290mm,paperwidth=100mm,margin=0mm]{geometry}
 \RequirePackage{xcolor}
 \RequirePackage{enumitem}
 \RequirePackage{multicol}
 \RequirePackage[skins,breakable]{tcolorbox}
 
-\RequirePackage[
-  % set width and height to A4 width and height
-  width=21.0truecm, height=29.7truecm,
-  % use any combination of these options to add different cut markings
-  cam, axes, cross,
-  %frame,
-  % set the type of TeX renderer you use
-  pdftex,
-  % center the contents
-  center
-]{crop}
+%\RequirePackage[
+%  % set width and height to A4 width and height
+%  width=21.0truecm, height=29.7truecm,
+%  % use any combination of these options to add different cut markings
+%  cam, axes, cross,
+%  %frame,
+%  % set the type of TeX renderer you use
+%  pdftex,
+%  % center the contents
+%  center
+%]{crop}
 
 \RequirePackage[]{lato}
 \renewcommand*\familydefault{\sfdefault}
 \RequirePackage[T1]{fontenc}
+
+\pagestyle{empty}
 
 \newtcolorbox{checklistbox}[3][]{%
     enhanced,
