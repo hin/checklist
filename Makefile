@@ -10,5 +10,5 @@ clean:
 %.pdf: %.tex checklist.cls
 	${PDFLATEX} $<
 
-%.print.pdf: %.pdf
+%.print.pdf: %.pdf crop.py
 	python crop.py $< $@
