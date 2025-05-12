@@ -1,13 +1,18 @@
 \documentclass{checklist}
 \usepackage[utf8]{inputenc}
 \usepackage{gensymb}
+\usepackage[yyyymmdd]{datetime}
+\renewcommand{\dateseparator}{-}
+
+\def \version {0.2}
 
 \begin{document}
-    
+
 \checklist{gray}{SportStar\textsuperscript{RTC} - SE-MMB / SE-MMC - Normala procedurer}{
-    Hans Insulander, ÖSFK
+    Hans Insulander, \today
     \hfill
-    \input{version.tex}
+    Version: \version
+
 
     \clsection{Före motorstart}{
         \cl{Daglig tillsyn}{UTFÖRD}
