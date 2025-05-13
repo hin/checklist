@@ -25,6 +25,7 @@
     %boxrule=1mm,
     leftrule=8mm,
     breakable,
+    fonttitle=\bfseries,
     overlay ={%
       \node[rotate=90,
             minimum width=1cm,
@@ -49,7 +50,7 @@
 }
 
 \newcommand{\clsection}[2]{
-    \tcbsubtitle{\textbf{#1}}
+    \tcbsubtitle[after skip=3pt, before skip=3pt]{#1}
     \clsectionnotitle{#2}
 }
 
