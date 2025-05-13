@@ -2,24 +2,13 @@
 \ProvidesClass{checklist}
 
 \LoadClass[10pt, a4paper, onecolumn, twoside]{article}
+\RequirePackage[dvipsnames]{xcolor}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[paperheight=290mm,paperwidth=95mm,margin=2mm]{geometry}
 \RequirePackage{xcolor}
 \RequirePackage{enumitem}
 \RequirePackage{multicol}
 \RequirePackage[skins,breakable]{tcolorbox}
-
-%\RequirePackage[
-%  % set width and height to A4 width and height
-%  width=21.0truecm, height=29.7truecm,
-%  % use any combination of these options to add different cut markings
-%  cam, axes, cross,
-%  %frame,
-%  % set the type of TeX renderer you use
-%  pdftex,
-%  % center the contents
-%  center
-%]{crop}
 
 \RequirePackage[]{lato}
 \renewcommand*\familydefault{\sfdefault}
@@ -53,25 +42,15 @@
     \end{checklistbox}
 }
 
-%\newcommand{\checklist}[3]{
-%    \begin{tcolorbox}[
-%        enhanced,
-%        breakable,
-%        size=small,
-%        colframe=#1,
-%        colback=#1!5!white,
-%        title=\textbf{#2},
-%%        title after break=\textbf{#2},
-%        ]
-%        #3
-%    \end{tcolorbox}
-%}
-%
-\newcommand{\clsection}[2]{
-    \tcbsubtitle{#1}
+\newcommand{\clsectionnotitle}[1]{
     \begin{enumerate}[nosep,leftmargin=3mm]
-        #2
+        #1
     \end{enumerate}
+}
+
+\newcommand{\clsection}[2]{
+    \tcbsubtitle{\textbf{#1}}
+    \clsectionnotitle{#2}
 }
 
 \newcommand{\cl}[2]{

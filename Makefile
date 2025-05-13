@@ -1,4 +1,4 @@
-DOCS		= sportstar.pdf pa28_semlt.pdf
+DOCS		= sportstar.pdf pa28_semlt.pdf pax_brief.pdf
 
 PDFLATEX = docker run -u $(shell id -u):$(shell id -g) --rm --net=none -v .:/data blang/latex:ctanfull pdflatex
 

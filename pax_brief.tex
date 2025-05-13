@@ -1,0 +1,80 @@
+\documentclass{checklist}
+\usepackage[utf8]{inputenc}
+\usepackage{gensymb}
+\usepackage[yyyymmdd]{datetime}
+\renewcommand{\dateseparator}{-}
+
+\def \version {0.1}
+
+\begin{document}
+
+\checklist{ForestGreen}{Passagerarbriefing}{
+    Hans Insulander, \today
+    \hfill
+    Version: \version
+
+    \clsection{Utanför flygplanet}{
+        \item Informera PAX om:
+        \begin{itemize}[nosep,leftmargin=3mm]
+            \item Flygplanet \& flygklubben
+            \item Dagens flygning, färdväg \& flygplatser
+            \item Tyst cockpit vid taxi, start \& landning
+            \item Tyst cockpit även när piloten ber om det
+            \item Lyssna när någon pratar i radion
+        \end{itemize}
+        \item Uppmana PAX att:
+        \begin{itemize}[nosep,leftmargin=3mm]
+            \item Ställa frågor
+            \item Säga till om något känns fel
+            \item Säga till vid illamående
+            \item Hjälpa till med att spana efter andra flygplan och personer
+            \item Ha kul och njuta av flygningen!
+        \end{itemize}
+    }
+
+    \clsection{I flygplanet}{
+        \cl{Demonstration av huv-/dörröppning}{UTFÖRD}
+        \cl{Säkerhetsbälten \& säten}{JUSTERADE}
+        \cl{Nödhammare, brandsläckare, m.m.}{FUNNA}
+        \cl{Ventilationsreglage}{GENOMGÅNGNA}
+        \cl{Fötterna på golvet}{UTFÖRD}
+        \cl{Styrspak \& reglage}{GENOMGÅNGNA}
+        \cl{Radio, nödfrekvens}{121.500}
+        \cl{Transponder, nödkod}{7700}
+        \cl{Nödprocedur}{GENOMGÅNGNA}
+        \cl{Frågor?}{FRÅGA}
+    }
+
+    \clsection{Motorstart}{
+        \cl{Folk i närheten}{SÄG TILL}
+        \cl{Andra flygplan}{SPANA}
+        \cl{Användning headset \& intercom}{INFORMERA}
+        \cl{Frågor?}{FRÅGA}
+    }
+
+    \clsection{Under flygning}{
+        \cl{Andra flygplan}{SPANA}
+        \cl{Illamående}{SÄG TILL}
+        \cl{Frågor?}{}
+    }
+
+    \clsection{Före landning}{
+        \cl{Fötterna på golvet}{UTFÖRD}
+        \cl{Styrspak \& reglage}{FRIA}
+        \cl{Tyst cockpit}{}
+        \cl{Spana efter flygplan \& andra faror}{VARNA}
+        \cl{Om vi behöver gå runt}{"GÅ RUNT!"}
+    }
+}
+\checklist{red}{Nöd}{
+    \clsection{Nödchecklista passagerare}{
+        \cl{Fötterna bort från pedalerna}{UTFÖRD}
+        \cl{Styrspak \& reglage}{FRIA}
+        \cl{Säkerhetsbälte}{DRA ÅT}
+        \cl{Händerna på säkerhetsbältet}{HÅLL I}
+        \cl{Gör som piloten säger}{}
+    }
+}
+
+\end{document}
+
