@@ -10,9 +10,8 @@
 \RequirePackage{multicol}
 \RequirePackage[skins,breakable]{tcolorbox}
 
-\RequirePackage[]{lato}
-\renewcommand*\familydefault{\sfdefault}
-\RequirePackage[T1]{fontenc}
+\RequirePackage{fontspec}
+\setmainfont{Lato}
 
 \pagestyle{empty}
 
@@ -30,7 +29,7 @@
       \node[rotate=90,
             minimum width=1cm,
             anchor=south,
-            font=\Large\sffamily\bfseries,
+            font=\Large,
             yshift=-8mm,
             white]
       at (frame.west) {#3};
