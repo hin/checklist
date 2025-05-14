@@ -1,0 +1,47 @@
+\documentclass[10pt]{article}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage[paperheight=297mm,paperwidth=210mm,left=110mm,top=10mm,right=10mm,bottom=10mm]{geometry}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{multicol}
+
+\usepackage[skins,breakable]{tcolorbox}
+\usepackage{tabularx}
+
+\usepackage{fontspec}
+\setmainfont{Lato}
+
+\pagestyle{empty}
+
+\newcommand\tider{
+    \tcbox[left=0mm,right=0mm,top=0mm,bottom=0mm,boxsep=0mm,fonttitle=\Large,title=Tider]{
+        \begin{tabular}{p{25mm}|p{25mm}|p{25mm}}
+            Flygplan   & Datum & Antal landningar \\
+            & & \\
+            & & \\
+            \hline
+            Tach ut   & Block start & Starttid \\
+            & & \\
+            & & \\
+            \hline
+            Tach in   & Block stopp & Landningstid \\
+            & & \\
+            & & \\
+        \end{tabular}
+    }
+}
+
+\begin{document}
+\hspace{0pt}
+\vfill
+
+\tider
+\tider
+\tider
+\tider
+\tider
+
+\vfill
+\hspace{0pt}
+\end{document}

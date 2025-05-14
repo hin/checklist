@@ -1,4 +1,4 @@
-DOCS		= sportstar.pdf pa28_semlt.pdf pax_brief.pdf
+DOCS		= sportstar.pdf pa28_semlt.pdf pax_brief.pdf loglapp.pdf
 
 DOCKERIMAGE = xetex
 
